@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign-up form</title>
+</head>
+<body>
+    <div class="left-column">
+        <div class="logo-container">
+            <img src="logo.svg" class="logo" alt="A hexagon being the Kiczka Tools' logo">
+            <h2>KICZKA TOOLS</h2>
+        </div>
+        <div class="motto-container fade-in">
+            <h1>Design smarter. Build better.</h1>
+            <img src="plans.svg" alt="A set of plans and architectural tools" class="plans">
+        </div>
+        <img src="https://static.thenounproject.com/png/scroll-down-icon-2623546-512.png" class="scroll pulse">
+    </div>
+    <div class="right-column">
+        <h3>Join a platform that helps architects and design teams work smarter. Discover tools that simplify project management, enhance collaboration, and turn creative ideas into real results.</h3> 
+        <p>Sign up to explore exclusive resources, beta tools, and productivity boosters for your studio.</p>
+        <h2>Create account</h2>
+        <form action="" method="get" class="sign-up">
+
+            <div class="form-row">
+                <div class="form-name">
+                    <label for="first-name">First name *</label>
+                    <input type="text" name="first-name" id="first-name" required>
+                </div>
+                <div class="form-name">
+                    <label for="last-name">Last name *</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-email">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" id="email" placeholder="frank.gehry@example.com" required>
+                </div>
+                <div class="form-phone">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+4170100100">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-password">
+                    <label for="password">Password *</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="form-password">
+                    <label for="conf-password">Confirm password *</label>
+                    <input type="password" name="password" id="conf-password" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-birthday">
+                    <label for="birthday">Date of birth *</label>
+                    <input type="date"
+                        id="birthday"
+                        name="birthday"
+                        min="1910-01-01"
+                        max="2020-12-31"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <fieldset class="form-radio">
+                    <legend>Choose client type *</legend>
+                    <div class="fieldset-inner-container">
+                        <div>
+                            <input type="radio" id="student" name="client" value="student" required>
+                            <label for="student">Student</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="professional" name="client" value="professional">
+                            <label for="professional">Professional</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="other-client" name="client" value="other">
+                            <label for="other-client">Other</label>
+                        </div>
+                    </div>
+                  </fieldset>
+            </div>
+
+            <div class="form-terms">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="terms" id="terms" value="accepted" required>
+                </div>
+                <label for="terms">I accept all terms and conditions *</label>
+            </div>
+              
+            <button type="submit" class="form-button">Create account</button>
+
+        </form>
+        <p>Already have an account? Ignore the form and <a href="https://ksolarek.github.io/calculator/">do some calculations!</a></p>
+    </div>
+
+
+    <script>
+        const scrollIcon = document.querySelector(".scroll");
+        const rightColumn = document.querySelector(".right-column");
+        function scrollForm() {
+            rightColumn.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        };
+        scrollIcon.addEventListener("click", scrollForm);
+    </script>
+</body>
+</html>
